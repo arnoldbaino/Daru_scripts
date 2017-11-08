@@ -9,6 +9,8 @@ BWA
   
 Samtools
   
+bcftools
+
 Picard
   
 GATK
@@ -66,7 +68,21 @@ java -jar GenomeAnalysisTK.jar -T VariantFiltration -R reference.fasta -V files.
 
 vcftools --vcf files_filtered.vcf --recode --keep-INFO-all
 
-12. To filter SNPs within 10base distance of each other, the 'master vcf' is split up into individual sample vcf and then use vcf_filter_module.py on each file
+12. To filter SNPs within 10 base distance of each other, the 'master vcf' is split up into individual sample vcf and then use vcf_filter_module.py on each file
+
+for file in files_filtered.vcf;do for sample in `/home/bcftools/bcftools-git/bcftools view -h $file | grep "^#CHROM" | cut  -f10-`; do /home/bcftools/bcftools-git/bcftools view -c1 -s $sample -o ${file/.vcf*/.$sample.vcf} $file;done;done
+
+then use: vcf_filter_module.py 9 in.vcf out.vcf
+
+13. Combine the vcfs into one
+
+java -jar GenomeAnalysisTK.jar -R reference.fasta -T CombineVariants –V vcf1 vcf2 vcf3.. -genotypeMergeOptions UNIQUIFY –o master.vcf
+
+14. Annotate the SNPs in the master vcf file and predict there effect on the genes
+
+java -Xmx4g -jar snpEff.jar -c snpEff.config -v m_tuberculosis_H37Rv file.vcf > annotated_file.vcf
+
+15. Change annotated_file.vcf into a fasta file by concatenating
 
 
 
