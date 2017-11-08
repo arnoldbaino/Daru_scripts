@@ -2,16 +2,22 @@
 Scripts for manuplating raw sequence data 
 
 The following tools should be installed and added to the system path
-
-  Trimmomatic
-  BWA
-  Samtools
-  Picard
-  GATK
-  VCFTools
-  SnpEff
-  vcf_filter_module.py
   
+Trimmomatic
+  
+BWA
+  
+Samtools
+  
+Picard
+  
+GATK
+  
+VCFTools
+  
+SnpEff
+  
+vcf_filter_module.py
   
   
 The following commands can be for each sample data or adjusted to run all the sample data
