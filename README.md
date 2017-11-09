@@ -2,15 +2,12 @@
 
 Scripts for manuplating raw illumina data to generate variant files that can be used for functional annotation and phylogeny
 
-
 The following tools should be installed and added to the system path
 ```  
-* [Trimmomatic](https://github.com/timflutre/trimmomatic)
-  
-BWA
-  
-Samtools
-  
+* [trimmomatic] (https://github.com/timflutre/trimmomatic)
+* [bwa] (http://bio-bwa.sourceforge.net/)
+* [samtools)
+ ``` 
 bcftools
 
 Picard
