@@ -12,8 +12,8 @@ The following tools should be installed and added to the system path
 * [gatk](https://github.com/broadinstitute/gatk)
 * [VCFTools](https://vcftools.github.io/downloads)
 * [SnpEff](http://snpeff.sourceforge.net/)
-* [vcf_filter_module.py]
-* [vcf_tab_to_fasta_alignment.pl]
+* [vcf_filter_module.py](https://github.com/arnoldbaino/Daru_scripts/blob/master/vcf_filter_module.py)
+* [vcf_tab_to_fasta_alignment.pl](https://github.com/arnoldbaino/Daru_scripts/blob/master/vcf_tab_to_fasta_alignment.pl)
   
   
 The following commands can be for each sample data or adjusted to run all the sample data
