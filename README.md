@@ -1,5 +1,5 @@
 # Daru_scripts
-Scripts for manuplating raw sequence data 
+Scripts for manuplating raw illumina data 
 
 The following tools should be installed and added to the system path
   
