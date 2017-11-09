@@ -1,9 +1,11 @@
 # Daru_scripts
-Scripts for manuplating raw illumina data 
+
+Scripts for manuplating raw illumina data to generate variant files that can be used for functional annotation and phylogeny
+
 
 The following tools should be installed and added to the system path
-  
-Trimmomatic
+```  
+* [Trimmomatic](https://github.com/timflutre/trimmomatic)
   
 BWA
   
