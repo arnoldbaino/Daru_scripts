@@ -36,7 +36,7 @@ bwa mem -t 4 -M -R "@RG\tID:OOOO\tSM:file.name\tPL:Illumina\tLB:001\tPU:001" ref
 
 samtools view -bS -F 4 file.sam > file.bam
 
-4. Sort the bam file
+4.Sort the bam file
 
 java -Xms1000M -Djava.io.tmpdir=./tmp. -jar picard-tools-1.119/SortSam.jar I=file.bam O=file_sorted.bam SO=coordinate
 
@@ -44,9 +44,9 @@ java -Xms1000M -Djava.io.tmpdir=./tmp. -jar picard-tools-1.119/SortSam.jar I=fil
 
 java -Xms1000M -Djava.io.tmpdir=./tmp. -jar picard-tools-1.119/MarkDuplicates.jar I=file_sorted.bam O=file_dup.bam M=file.txt
 
-6. Generate index for each bam file
-
-java -Xms1000M -Djava.io.tmpdir=./tmp. -jar picard-tools-1.119/BuildBamIndex.jar I=file_dup.bam
+6\. Generate index for each bam file
+  
+  java -Xms1000M -Djava.io.tmpdir=./tmp. -jar picard-tools-1.119/BuildBamIndex.jar I=file_dup.bam
 
 7. Define targets for local realignment
 
